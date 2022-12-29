@@ -1,0 +1,298 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    min-height: 100vh;
+    background: url(background.jpg) repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("background.jpg");
+    background-color: #2d2dc2;
+    background-color: #f3310f;
+opacity: 0.8;
+background: linear-gradient(135deg, #dadae70e 25%, transparent 25%) -10px 0/ 20px 20px, linear-gradient(225deg, #b9bbe43a 25%, transparent 25%) -10px 0/ 20px 20px, linear-gradient(315deg, #c3c5ee1a 25%, transparent 25%) 0px 0/ 20px 20px, linear-gradient(45deg, #a9abd142 25%, #e5e5f74b 25%) 0px 0/ 20px 20px;
+}
+/* ++++++++++++++++++++++++++++++++++++++LOGO++++++++++++++++++++++++++++++++++++++++ */
+.logo{
+    width: 50px;
+    height: 50px;
+}
+header{
+    position: fixed;
+    top: 0;left: 0;right: 0;
+    background:  #9fd3c7;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+    padding: 0px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    cursor: pointer;
+    
+}
+/* ---------------------------------section--------------------------------------------  */
+section{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section .container{
+    margin: 100px;
+}
+.card .ppic{
+    margin: 30px;
+    border-radius: 30px;
+}
+
+section h1{
+    font-size: 60px;
+}
+section h2{
+    font-size: 40px;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid rgb(207, 231, 139);
+    border-radius: 50px;
+    background-color: #defcf9;
+    text-transform: uppercase;
+    border: 3px solid#cca8e9;
+}
+section .container .first{
+    margin-top: 20px;
+}
+section .card{
+    display: flex;
+}
+section .card .text-card{
+    background: #7b99c5;
+    background: #b321a6;
+    background: #7de726;
+    margin: 20px;
+    margin: 80px;
+    padding:20px ;
+    border-radius: 20px;
+    justify-content: center;
+    border: 2px solid#d4bde7;
+
+}
+section .card .text-card h3{
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-align: left;
+}
+section .card .text-card p{
+    font-weight: bold;
+}
+
+
+
+  
+/* ____________________________________media____________________________________________ */
+@media(max-width: 700px ){
+    section h1{
+        font-size: 30px;
+    }
+    section .card{
+        flex-direction: column;
+    }
+}
+
+
+section#profile{
+    position: relative;
+    
+}
+header .logo{
+    font-weight: bolder;
+    font-size: 25px;
+    color: rgba(241, 229, 229, 0.288);
+}
+header .navbar ul{
+    list-style: none;
+}
+header .navbar ul li{
+    position: relative;
+    float: left;
+}
+header .navbar ul li a{
+    border-radius: 30px;
+    font-size: 20px;
+    padding: 20px;
+    color: #333;
+    display: block;
+}
+
+/* ------------------------------------------Navbar-------------------------------------- */
+section {
+    width: 100%;
+    float: left;
+   height: 100vh;
+   
+   
+      
+}
+header .navbar ul li a:hover, 
+header .navbar ul li a.active{
+    background: rgb(9, 140, 145);
+    color: rgb(5, 0, 0);
+}
+
+
+
+
+header .navbar ul ul{
+    width: 40px;
+    height: 200px;
+    position: absolute;
+    top: 60px;
+    right:350px;
+    border-top: 3px solid #23dbdb;
+    opacity: 1;
+    visibility:visible;
+    /* display: inline-block; */
+}
+header .navbar ul li:hover > ul{
+    top: 70px;
+    opacity: 1;
+    background-color: yellow;
+    visibility: visible;
+    transition: .3s linear;
+}
+
+
+  
+  
+
+  
+ 
+  
+
+#menu-bar{
+    display: none;
+}
+
+header label{
+    font-size: 40px;
+    color: #333;
+    cursor:col-resize;
+    display: none;
+}
+/* ____________________________________media--max-width:700px____________________________________________ */
+@media(max-width:700px){
+    
+    header{
+        padding: 8px;
+        
+    }
+    #menu-bar:checked ~ .navbar{
+        display: initial;
+    }
+    header label{
+        display: initial;
+    }
+    
+    
+    
+    header .navbar{
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: #fff;
+        border-top: 1px solid rgba(0,0,0,.1) ;
+        display: none;
+    }
+    header .navbar ul li{
+        width: 100%;
+    }
+    section .container .first {
+        margin-top: 316px;
+    }
+    
+
+}
+
+    
+    
+    
+    #menu-bar:checked ~ .navbar{
+    display: initial;      /* if this is disabled then the menu option will not work*/
+}
+/* ____________________________________media--max-width:400px____________________________________________ */
+@media(max-width:400px){
+
+    header{
+        padding: 8px;
+        
+   }
+   #menu-bar:checked ~ .navbar{
+       display: initial;
+   }
+   header label{
+       display: initial;
+   }
+
+
+   
+header .navbar{
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: #fff;
+    border-top: 1px solid rgba(0,0,0,.1) ;
+    display: none;
+}
+header .navbar ul li{
+   width: 100%;
+}
+section .container{
+    margin-top: -210px;
+
+}
+section .container .first{
+   margin-top: 200pxpx;
+   font-size: 20px;
+}
+section .container .second{
+    margin-top: 400px;
+    font-size: 20px;
+}
+ section .container .third{
+    margin-top: 200px;
+    font-size: 20px;
+}
+ section .container .forth{
+    margin-top: 200px;
+    font-size: 20px;
+}
+ section .container .fifth{
+    margin-top: -200px;
+    font-size: 20px;
+}
+.card .ppic{
+    width: 150px;
+}
+
+section{
+    height: 180vh;
+}
+
+
+
+#menu-bar:checked ~ .navbar{
+   display: initial;      /* if this is disabled then the menu option will not work*/
+}
+
+}
+    
+
+
+
